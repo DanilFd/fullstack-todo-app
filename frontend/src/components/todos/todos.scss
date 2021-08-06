@@ -1,0 +1,139 @@
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 100px;
+  width: 50%;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.form__wrapper {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight: 700;
+  }
+
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary, $secondary);
+  border-image-slice: 1;
+}
+
+.form__field {
+  &:required, &:invalid {
+    box-shadow: none;
+  }
+}
+
+.form__button {
+  margin-top: 5px;
+  font-weight: 700;
+  color: #222222;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 5px;
+  border: none;
+  background: #00D7FF;
+  transition: 0.2s;
+}
+
+.form__button:hover {
+  background: $primary;
+}
+
+.form__button:active {
+  background: $secondary;
+}
+
+.todos__container {
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 50px;
+
+}
+
+.todo {
+  padding: 10px;
+}
+
+.todo__wrapper-exit-active {
+  animation: fade-out 500ms forwards;
+}
+
+.todo__wrapper-enter-active {
+  animation: fade-in 500ms forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(25%);
+    opacity: 0;
+  }
+}

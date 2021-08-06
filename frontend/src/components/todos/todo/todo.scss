@@ -1,0 +1,59 @@
+/* Style the list items */
+.todo__wrapper {
+  word-break: break-all;
+
+  p {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 40px 12px 12px;
+    background: #00D7FF;
+    font-size: 16px;
+    transition: 0.2s;
+    border-radius: 10px;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  p:hover {
+    transition: 500ms;
+    background: #00A8C7;
+  }
+
+  p.completed {
+    background: #02505F;
+    color: black;
+    text-decoration: line-through;
+    padding: 12px 45px 12px 40px;
+  }
+
+  p.completed::before {
+    content: '';
+    position: absolute;
+    border-color: #4eff1b;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+}
+
+

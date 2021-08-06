@@ -1,0 +1,50 @@
+
+.header__content {
+  position: fixed;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+  z-index: 1;
+  background-color: #00D7FF;
+  display: flex;
+  justify-content: space-between;
+
+  .header__content_left {
+    display: flex;
+
+    img {
+      padding: 0 100px;
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .header__content_right {
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+
+    button {
+      padding: 5px;
+      margin: 0 45px 0 15px;
+      cursor: pointer;
+      background: transparent;
+      outline: none; /* Для синий ободки */
+      border: black 1px solid;
+
+      img {
+        width: 10px;
+      }
+
+      &:hover {
+        transition: 500ms;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .header__content_right {
+    span {
+      font-weight: 450;
+    }
+  }
+}
