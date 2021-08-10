@@ -31,13 +31,14 @@ export const useTodos = () => {
 
     const deleteTodo = useCallback((id: string) => {
         setLoading(true)
+        setTodos(todos => todos.map(todo => todo._id !== id ? todo : {...todo, disabled: true}))
         deleteTodoApi(id)
             .then(() => {
-                setTodos(todos.filter(el => el._id !== id))
+                setTodos(todos => todos.filter(el => el._id !== id))
             })
             .catch(err => setError(err))
             .finally(() => setLoading(false))
-    }, [todos])
+    }, [])
 
     const createTodo = useCallback((title: string) => {
         setLoading(true)

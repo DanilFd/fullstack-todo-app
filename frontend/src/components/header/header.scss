@@ -1,27 +1,29 @@
 
 .header__content {
   position: fixed;
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%;
   z-index: 1;
+  left: 0;
+  right: 0;
   background-color: #00D7FF;
   display: flex;
   justify-content: space-between;
+  height: 70px;
 
   .header__content_left {
     display: flex;
+    font-size: 13px;
 
     img {
       padding: 0 100px;
-      width: 90px;
-      height: 90px;
+      width: 70px;
+      height: 70px;
     }
   }
-
   .header__content_right {
     display: flex;
     align-items: center;
-    font-size: 19px;
+    font-size: 17px;
+    font-weight: 450;
 
     button {
       padding: 5px;
@@ -42,9 +44,36 @@
     }
   }
 
-  .header__content_right {
-    span {
-      font-weight: 450;
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 23px;
+    }
+    .header__content_left {
+      img {
+        padding: 0 35px;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    .header__content_left {
+      h1 {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        padding: 0 20px;
+      }
+    }
+    .header__content_right {
+      button {
+        margin: 0 10px 0 15px;
+      }
+
+      span {
+        font-size: 15px;
+      }
     }
   }
 }

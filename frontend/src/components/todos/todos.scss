@@ -6,7 +6,7 @@ $gray: #9b9b9b;
 .form__group {
   position: relative;
   padding: 15px 0 0;
-  margin-top: 100px;
+  margin-top: 50px;
   width: 50%;
 }
 
@@ -100,8 +100,17 @@ $gray: #9b9b9b;
 .todos__container {
   margin: 0 auto;
   width: 50%;
-  padding-top: 50px;
+  padding: 15px 0 50px 0;
 
+}
+
+.form__group__input {
+  display: flex;
+  flex: 1 1 auto;
+
+  input {
+    margin-right: 10px;
+  }
 }
 
 .todo {
@@ -135,5 +144,12 @@ $gray: #9b9b9b;
   100% {
     transform: translateX(25%);
     opacity: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  input#title.form__field {
+    font-size: 18px;
+    padding: 3px 0;
   }
 }

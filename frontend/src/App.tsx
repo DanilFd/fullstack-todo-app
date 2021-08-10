@@ -5,6 +5,7 @@ import {Header} from "./components/header/Header";
 import {AuthContext} from "./context/AuthContext";
 import {useEffect} from "react";
 import Loading from "./components/loading/Loading";
+import {Footer} from "./components/footer/Footer";
 
 function App() {
     const {isAuth, registration, logout, login, isLoading, checkAuth, user, error} = useAuth()
@@ -22,6 +23,7 @@ function App() {
             <BrowserRouter>
                 {isAuth && <Header/>}
                 {routes}
+                <Footer/>
             </BrowserRouter>
         </AuthContext.Provider>
 

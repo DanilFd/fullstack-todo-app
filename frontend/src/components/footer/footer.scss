@@ -1,0 +1,26 @@
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: #323232;
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: center;
+
+  .footer__stack {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    img {
+      margin: 0 15px;
+      width: 25px;
+    }
+
+    .footer__stack_icon-mongo {
+      width: 15px;
+    }
+  }
+}

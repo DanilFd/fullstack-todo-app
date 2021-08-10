@@ -12,10 +12,11 @@ export const Todo = ({todo, deleteTodo, putTodo}: Props) => {
     return (
         <div className="todo__wrapper">
             <p onClick={() => putTodo(todo._id)} className={`todo__title ${todo.completed && "completed"}`}>{todo.title}
-                <span onClick={e => {
-                    deleteTodo(todo._id)
-                    e.stopPropagation()
-                }} className="close">×</span>
+                    <button disabled={todo.disabled} onClick={e => {
+                        deleteTodo(todo._id)
+                        e.stopPropagation()
+                    }} className="close">×
+                    </button>
             </p>
         </div>
     );

@@ -10,7 +10,7 @@ export const useRoutes = (isAuth: boolean) => {
             <Switch>
                 <Route exact path="/registration" component={Registration}/>
                 <Route exact path="/login" component={Login}/>
-                <Redirect to="/registration"/>
+                <Redirect to="/login"/>
             </Switch>
         );
     }
